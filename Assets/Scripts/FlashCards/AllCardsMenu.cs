@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AllCardsMenu : MonoBehaviour
 {
-    [SerializeField] private List<FlashCardSO> flashCardsSO = new();
     [SerializeField] private GameObject content;
     [SerializeField] private GameObject cardPrefab;
     
-    void Awake()
+    public void Activate(List<FishCard> fishCards)
     {
-        foreach (var flashCard in flashCardsSO)
+        fishCards = SaveFishCardsSystem.LoadFishCards();
+        foreach (var flashCard in fishCards)
         {
             var newCard = Instantiate(cardPrefab, content.transform).GetComponent<FlashCardMenu>();
             Debug.Log(newCard.name);

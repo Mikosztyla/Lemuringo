@@ -7,11 +7,11 @@ using UnityEngine.Serialization;
 
 public class FlashCardMenu : MonoBehaviour
 {
-    private FlashCardSO flashCardSo;
+    private FishCard flashCardSo;
     [SerializeField] private TextMeshProUGUI originalText;
     [SerializeField] private TextMeshProUGUI translatedText;
 
-    public void SetFlashCard(FlashCardSO flashCard)
+    public void SetFlashCard(FishCard flashCard)
     {
         flashCardSo = flashCard;
         originalText.text = flashCard.OriginalWord;

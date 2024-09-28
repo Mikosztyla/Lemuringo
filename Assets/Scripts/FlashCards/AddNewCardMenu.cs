@@ -25,6 +25,11 @@ public class AddNewCardMenu : MonoBehaviour
 
     private void AddCardButton()
     {
-        Debug.Log(originalWordInputField.text + " " + translatedWordInputFields.text);
+        var newFishCard = new FishCard();
+        newFishCard.OriginalWord = originalWordInputField.text;
+        newFishCard.TranslatedWord = translatedWordInputFields.text;
+        CardMenu.Instance.AddCard(newFishCard);
+        originalWordInputField.text = "";
+        translatedWordInputFields.text = "";
     }
 }

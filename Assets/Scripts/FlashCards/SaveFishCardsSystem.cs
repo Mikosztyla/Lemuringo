@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveFishCardsSystem : MonoBehaviour
+public static class SaveFishCardsSystem
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void SaveFishCards(List<FishCard> fishCards)
     {
-        
+        var fishCardsList = new FishCards();
+        fishCardsList.FishCardsList = fishCards;
+        string json = JsonUtility.ToJson(fishCardsList);
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/FishCards.json", json);
     }
 
-    // Update is called once per frame
-    void Update()
+    public static List<FishCard> LoadFishCards()
     {
-        
+        var fishCards = JsonUtility.FromJson<FishCards>(System.IO.File.ReadAllText(Application.persistentDataPath + "/FishCards.json"));
+
+        return fishCards.FishCardsList;
     }
 }

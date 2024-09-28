@@ -6,25 +6,34 @@ using UnityEngine;
 public class CardMenu : MonoBehaviour
 {
     public static CardMenu Instance;
-    
-    [SerializeField] private GameObject allCards;
+    private List<FishCard> fishCards = new();
+
+    [SerializeField] private AllCardsMenu allCardsMenu;
     [SerializeField] private GameObject addNewCard;
 
     private void Awake()
     {
         Instance = this;
-        addNewCard.SetActive(false);
+        ShowAllCards();
     }
 
     public void ShowAllCards()
     {
+        fishCards = SaveFishCardsSystem.LoadFishCards();
         addNewCard.SetActive(false);
-        allCards.SetActive(true);
+        allCardsMenu.Activate(fishCards);
+        allCardsMenu.gameObject.SetActive(true);
     }
 
     public void ShowAddNewCard()
     {
         addNewCard.SetActive(true);
-        allCards.SetActive(false);
+        allCardsMenu.gameObject.SetActive(false);
+    }
+
+    public void AddCard(FishCard fishCard)
+    {
+        fishCards.Add(fishCard);
+        SaveFishCardsSystem.SaveFishCards(fishCards);
     }
 }
