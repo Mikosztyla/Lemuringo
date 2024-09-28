@@ -7,9 +7,9 @@ using UnityEngine;
 
 public class TranslatorApi
 {
-    private readonly string _apiKey = "bd7732c2-83c8-44d2-a619-eed7697c18a2:fx";
+    private static readonly string _apiKey = "bd7732c2-83c8-44d2-a619-eed7697c18a2:fx";
     private readonly string _apiTranslateUrl = "https://api-free.deepl.com/v2/translate";
-    private readonly string _apiLanguagesUrl = "https://api-free.deepl.com/v2/languages";
+    private static readonly string _apiLanguagesUrl = "https://api-free.deepl.com/v2/languages";
     private readonly string _sourceLanguage;
     private readonly string _targetLanguage;
 
@@ -47,7 +47,7 @@ public class TranslatorApi
             .ToDictionary(x => x.word, x => x.translation);
     }
 
-    public async Task<Dictionary<string, string>> GetAvailableLanguages()
+    public static async Task<Dictionary<string, string>> GetAvailableLanguages()
     {
         using var client = new HttpClient();
         var request = new HttpRequestMessage(HttpMethod.Get, _apiLanguagesUrl);
