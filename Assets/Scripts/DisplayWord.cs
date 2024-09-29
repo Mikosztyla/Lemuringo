@@ -29,7 +29,10 @@ public class DisplayWord : MonoBehaviour
     private void Update()
     {
         if (!Input.anyKeyDown || wordToDisplay == null) return;
-        if (Input.GetKeyDown(wordToDisplay[currentLetter].ToString()))
+        Debug.Log(wordToDisplay[currentLetter].ToString());
+        char letter = wordToDisplay[currentLetter];
+        KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), letter.ToString().ToUpper());
+        if (Input.GetKeyDown(key))
         {
             UpdateWordToDisplay(LetterType.NORMAL);
         } else
