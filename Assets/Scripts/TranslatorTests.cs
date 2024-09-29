@@ -16,10 +16,7 @@ public class TranslatorTests : MonoBehaviour
 
     private async Task Test()
     {
-        var dupa = new TranslatorApi("PL", "EN");
-        var words = new List<string> { "dupa"};
-        var results = await dupa.Translate(words);
-        // var results = await dupa.GetAvailableLanguages();
+        var results = await TranslatorApi.GetAvailableLanguages();
         foreach (var result  in results)
         {
             Debug.Log(result);

@@ -13,6 +13,6 @@ public class AddNewCardButton : MonoBehaviour
 
     private void AddNewCard()
     {
-        CardMenu.Instance.ShowAddNewCard();
+        CardMenu.Instance.ShowAddNewCardMenu();
     }
 }
