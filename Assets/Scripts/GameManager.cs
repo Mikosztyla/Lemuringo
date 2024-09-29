@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         {
             translatedWordsList.Add(word.Value);
         }
-        GetComponent<WordManager>().LoadNewWords(translatedWordsList);
+        GetComponent<WordManager>().LoadNewWords(translatedWordsList, level.words);
         SceneManager.LoadScene(3);
     }
 }

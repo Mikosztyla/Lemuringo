@@ -42,6 +42,7 @@ public class DisplayWord : MonoBehaviour
         if (wordToDisplay == null) return;
         this.wordToDisplay = wordToDisplay;
         currentLetter = 0;
+        EnemyWords.Instance.ActivateWord(WordManager.Instance.GetOriginalWord());
         SetUpNewWord();
     }
           
