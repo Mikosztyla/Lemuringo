@@ -48,6 +48,6 @@ public class GameManager : MonoBehaviour
             translatedWordsList.Add(word.Value);
         }
         GetComponent<WordManager>().LoadNewWords(translatedWordsList);
-        SceneManager.LoadScene(SceneManager.GetSceneByName("Scenes/Game").buildIndex);
+        SceneManager.LoadScene(3);
     }
 }

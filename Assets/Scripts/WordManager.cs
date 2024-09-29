@@ -4,19 +4,9 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour
 {
-    private List<string> words = new List<string>();
-    private int currWord = 0;
-
-    private void Awake()
-    {
-        words = new List<string>
-        {
-            "abcd",
-            "aaa",
-            "bbbbbbb",
-            "c"
-        };
-    }
+    public static WordManager Instance;
+    private List<string> words = new();
+    private int currWord;
 
     public string GetNewWord()
     {
@@ -31,6 +21,7 @@ public class WordManager : MonoBehaviour
     public void LoadNewWords(List<string> newWords)
     {
         currWord = 0;
+        Debug.Log(words);
         words = newWords;
     }
 }

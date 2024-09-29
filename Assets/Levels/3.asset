@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   levelId: 3
-  words: []
+  words:
+  - dupa
+  - chuj
   levelEnabled: 1
   levelPassed: 0
