@@ -14,4 +14,9 @@ public class ButtonsManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void LoadLevel(LevelDisplay levelDisplay)
+    {
+        FindAnyObjectByType<GameManager>().LoadLevel(levelDisplay.GetLevelSO());
+    }
 }

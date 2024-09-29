@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   levelId: 1
-  words: []
+  words:
+  - aaaa
+  - bbbb
+  - ccc
   levelEnabled: 1
   levelPassed: 1

@@ -556,8 +556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ef0ee8ae46b7e4fb8f06c78310dc1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yourLanguage: polski
-  otherLanguage: angielski
+  yourLanguage: PL
+  otherLanguage: EN
 --- !u!114 &1736021843
 MonoBehaviour:
   m_ObjectHideFlags: 0

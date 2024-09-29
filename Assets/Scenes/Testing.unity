@@ -5224,6 +5224,110 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1250641567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250641572}
+  - component: {fileID: 1250641571}
+  - component: {fileID: 1250641570}
+  - component: {fileID: 1250641569}
+  - component: {fileID: 1250641568}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1250641568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250641567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0671131d46501174a9a85d3e46d3f4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disabledColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0.68235296}
+  enabledColor: {r: 1, g: 1, b: 1, a: 1}
+  passedColor: {r: 0.32169393, g: 1, b: 0.19433957, a: 1}
+  levels:
+  - {fileID: 11400000, guid: 8301ac354234fd747ba583f463661b31, type: 2}
+  - {fileID: 11400000, guid: aac62dc0ea5ba6442b51b510386acfff, type: 2}
+  - {fileID: 11400000, guid: 4e3d8f9c944cd444eb900942b8acccb4, type: 2}
+  - {fileID: 11400000, guid: dbdd6c0b47c9a58448d3a637e3dbeb77, type: 2}
+  - {fileID: 11400000, guid: 99a2147babc137649a975f552aadd7b5, type: 2}
+  - {fileID: 11400000, guid: 91502e3a49c0efd4a8506d4aa445552e, type: 2}
+  - {fileID: 11400000, guid: 484b1b5b76e5a354da7ccc6a14d84be7, type: 2}
+  - {fileID: 11400000, guid: d30f1de7b9b03ad4bbb1d60b231d9077, type: 2}
+  - {fileID: 11400000, guid: 3c0d721267703ce41bc68b38892f7d8a, type: 2}
+  - {fileID: 11400000, guid: 934909ebb27fda44e8c3d8190289580b, type: 2}
+  - {fileID: 11400000, guid: 60c4874bae28b5446ba0733812519343, type: 2}
+  - {fileID: 11400000, guid: 44aaa591b64b6c645ae549a9b9591169, type: 2}
+--- !u!114 &1250641569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250641567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef0ee8ae46b7e4fb8f06c78310dc1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yourLanguage: PL
+  otherLanguage: EN
+--- !u!114 &1250641570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250641567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e9ef14c0358374a84b866d5f051ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1250641571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250641567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a173659431f844428cc93b15018f406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalColor: {r: 0, g: 0, b: 0, a: 1}
+  wrongColor: {r: 1, g: 0, b: 0, a: 1}
+  clueColor: {r: 0.5245282, g: 0.41863286, b: 0.41863286, a: 1}
+--- !u!4 &1250641572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250641567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339774565
 GameObject:
   m_ObjectHideFlags: 0
@@ -45500,3 +45604,4 @@ SceneRoots:
   - {fileID: 2098992376}
   - {fileID: 1873459620}
   - {fileID: 246335307}
+  - {fileID: 1250641572}
