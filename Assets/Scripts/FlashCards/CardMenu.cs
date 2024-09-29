@@ -24,7 +24,8 @@ public class CardMenu : MonoBehaviour
     public void Initialize()
     {
         DisableEverything();
-        languageSelector.gameObject.SetActive(true);
+        allCardsMenu.gameObject.SetActive(true);
+        allCardsMenu.Initialize(fishCards);
     }
     
     public void Initialize(string yourLanguage, string otherLanguage)

@@ -7,7 +7,7 @@ public class ButtonsManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        MainMenu.Instance.ActivePlay();
     }
 
     public void QuitGame()
