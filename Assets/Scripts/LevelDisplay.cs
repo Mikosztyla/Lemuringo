@@ -37,7 +37,7 @@ public class LevelDisplay : MonoBehaviour
 
     public LevelSO GetLevelSO() { return levelSO; }
 
-    private void UpdateLevel()
+    public void UpdateLevel()
     {
         if (levelSO == null) return;
         if (levelSO.levelEnabled) EnableLevel();

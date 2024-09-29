@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     public void AllWordsUsed()
     {
-        Debug.Log("You Win");
+        FindObjectOfType<LevelsManager>().LevelPassed();
     }
 
     public string GetYourLanguage()

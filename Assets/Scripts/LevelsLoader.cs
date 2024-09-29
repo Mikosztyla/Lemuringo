@@ -15,4 +15,12 @@ public class LevelsLoader : MonoBehaviour
             t.gameObject.GetComponent<LevelDisplay>().SetLevelSO(levels[counter++]);
         }
     }
+
+    public void UpdateLevels()
+    {
+        foreach (Transform t in levelsTransform)
+        {
+            t.gameObject.GetComponent<LevelDisplay>().UpdateLevel();
+        }
+    }
 }
