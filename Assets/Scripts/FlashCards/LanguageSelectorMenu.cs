@@ -30,7 +30,7 @@ public class LanguageSelectorMenu : MonoBehaviour
     private void ContinueCLick()
     {
         CardMenu.Instance.Initialize(languageDictionary[myLanguageDropdown.captionText.text], languageDictionary[otherLanguageDropdown.captionText.text]);
-        CardMenu.Instance.ShowAllCards(); 
+        MainMenu.Instance.ActiveMenu(); 
         Destroy(gameObject);
     }
 }
