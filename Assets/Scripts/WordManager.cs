@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour
 {
-    private List<string> words;
+    private List<string> words = new List<string>();
     private int currWord = 0;
 
-    private void Start()
+    private void Awake()
     {
         words = new List<string>
         {

@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: D
   m_EditorClassIdentifier: 
   letterName: D
-  letterImageNormal: {fileID: 21300000, guid: 3bc1c141084cdd642bf56634d5090067, type: 3}
-  letterImageWrong: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  letterImageClue: {fileID: 0}
+  letterImageNormal: {fileID: 21300000, guid: 8370d6ed91dc49248b445d23130a2c38, type: 3}
+  letterImageWrong: {fileID: 21300000, guid: 140f5585389b00444a5f32aa94d3a587, type: 3}
