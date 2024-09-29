@@ -125,8 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2675c79046c6a840beaa3c4106123ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterDoDisplay: {fileID: 0}
+  letterToDisplay: {fileID: 0}
   letterImage: {fileID: 7864245882977167666}
+  baseImage: {fileID: 4355551229701627329}
 --- !u!1 &6493437715234977851
 GameObject:
   m_ObjectHideFlags: 0

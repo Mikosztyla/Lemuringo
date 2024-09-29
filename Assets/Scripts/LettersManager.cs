@@ -5,6 +5,9 @@ using UnityEngine;
 public class LettersManager : MonoBehaviour
 {
     private Dictionary<string, LetterSO> letters;
+    public Color normalColor;
+    public Color wrongColor;
+    public Color clueColor;
 
     private void Awake()
     {

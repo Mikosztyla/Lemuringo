@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: I
   m_EditorClassIdentifier: 
   letterName: I
-  letterImage: {fileID: 21300000, guid: 0d0a33bc7e7c81342a88467cd7b2dc1b, type: 3}
+  letterImageNormal: {fileID: 21300000, guid: 1aaad59b7c7c9814c89546953c88229a, type: 3}
+  letterImageWrong: {fileID: 21300000, guid: c64213c8b6c5e55418c3397bb95fcd1c, type: 3}

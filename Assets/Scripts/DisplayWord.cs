@@ -13,6 +13,8 @@ public class DisplayWord : MonoBehaviour
     private LettersManager lettersManager;
     private WordManager wordManager;
     private List<LetterDisplay> letterList;
+    public float shakeAmount = 0.05f;
+    private bool isShaking = false;
 
 
     private void Start()
@@ -29,8 +31,6 @@ public class DisplayWord : MonoBehaviour
         if (Input.GetKeyDown(wordToDisplay[currentLetter].ToString()))
         {
             UpdateWordToDisplay(LetterType.NORMAL);
-        } else if (Input.GetKeyDown(KeyCode.Backspace)) {
-            UpdateWordToDisplay(LetterType.DISABLED);
         } else
         {
             UpdateWordToDisplay(LetterType.WRONG);
@@ -51,6 +51,7 @@ public class DisplayWord : MonoBehaviour
         switch (letterType)
         {
             case LetterType.NORMAL:
+                LeanTween.scale(currLetterDisplay.gameObject, new Vector3(1f, 1f, 1f), 0.1f);
                 currentLetter++;
                 if (currentLetter == wordToDisplay.Length)
                 {
@@ -58,11 +59,22 @@ public class DisplayWord : MonoBehaviour
                     break;
                 }
                 currLetterDisplay = letterList[currentLetter];
+                LeanTween.scale(currLetterDisplay.gameObject, new Vector3(1.2f, 1.2f, 1f), 0.1f);
                 break;
             case LetterType.DISABLED:
                 if (currentLetter <= 0) break;
                 currentLetter--;
                 currLetterDisplay = letterList[currentLetter];
+                break;
+            case LetterType.WRONG:
+                if (isShaking) return;
+                isShaking = true;
+                Vector3 originalPosition = transform.localPosition;
+                LeanTween.moveLocal(currLetterDisplay.gameObject, originalPosition + (Vector3.up * UnityEngine.Random.Range(-shakeAmount, shakeAmount)), 0.03f).setLoopPingPong(2).setOnComplete(() =>
+                {
+                    transform.localPosition = originalPosition;
+                    isShaking = false;
+                });
                 break;
         } 
     }
@@ -83,6 +95,7 @@ public class DisplayWord : MonoBehaviour
         }
 
         currLetterDisplay = letterList[currentLetter];
+        LeanTween.scale(currLetterDisplay.gameObject, new Vector3(1.2f, 1.2f, 1f), 0.2f);
     }
 
     private void WordCompleted()

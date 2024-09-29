@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float movementSpeed = 2f;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator animator;
+
+    Vector2 movement;
+
+    private void Update()
     {
-        
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", Mathf.Min(1f, movement.sqrMagnitude));
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        rb.MovePosition(rb.position + movement * movementSpeed * Time.deltaTime);
     }
 }

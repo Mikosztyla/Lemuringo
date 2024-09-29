@@ -8,5 +8,4 @@ public class LetterSO : ScriptableObject
     public string letterName;
     public Sprite letterImageNormal;
     public Sprite letterImageWrong;
-    public Sprite letterImageClue;
 }
