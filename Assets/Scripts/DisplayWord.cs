@@ -15,14 +15,15 @@ public class DisplayWord : MonoBehaviour
     private List<LetterDisplay> letterList;
     public float shakeAmount = 0.05f;
     private bool isShaking = false;
-
+    private float _damage;
 
     private void Start()
     {
         letterList = new List<LetterDisplay>();
         lettersManager = FindAnyObjectByType<LettersManager>();
-        wordManager = FindAnyObjectByType<WordManager>();
+        wordManager = WordManager.Instance;
         SetWordToDisplay(wordManager.GetNewWord());
+        _damage = 100f / wordManager.GetAmoutOfWords();
     }
 
     private void Update()
@@ -102,6 +103,7 @@ public class DisplayWord : MonoBehaviour
     private void WordCompleted()
     {
         Debug.Log("zajebiscie");
+        GameObject.FindWithTag("Enemy").GetComponent<HealthBar>().TakeDamage(_damage);
         SetWordToDisplay(wordManager.GetNewWord());
     }
 }

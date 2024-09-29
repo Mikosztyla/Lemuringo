@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
     
     void Update()
     {
-        if(Vector3.Distance(transform.position, _player.transform.position) > _minRange)
+        if(_player != null && Vector3.Distance(transform.position, _player.transform.position) > _minRange)
         { 
             transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
         }

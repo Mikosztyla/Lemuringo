@@ -4,9 +4,11 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private Vector2 direction;
-
     private Transform player;
-
+    [SerializeField]
+    private float _damage = 10f;
+    
+    
     public void SetPlayerTransform(Transform playerTransform)
     {
         player = playerTransform;
@@ -26,6 +28,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.collider.CompareTag("Player"))
+        {
+            collision.collider.GetComponent<HealthBar>().TakeDamage(_damage);
+        }
+        
         Destroy(gameObject);
     }
 

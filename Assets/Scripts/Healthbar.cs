@@ -13,7 +13,6 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        TakeDamage(100f);
     }
 
     public void UpdateHealthBar(float health)
@@ -24,6 +23,11 @@ public class HealthBar : MonoBehaviour
         if (filling != null)
         {
             filling.localScale = new Vector3(fillAmount, filling.localScale.y, filling.localScale.z);
+        }
+        
+        if (currentHealth == 0)
+        {
+            HandleDeath();
         }
     }
     
@@ -38,5 +42,19 @@ public class HealthBar : MonoBehaviour
     {
         currentHealth += amount;
         UpdateHealthBar(currentHealth);
+    }
+
+    public void HandleDeath()
+    {
+        if (CompareTag("Player"))
+        {
+            Debug.Log("Player's health dropped to 0!");
+        }
+        else if (CompareTag("Enemy"))
+        {
+            Debug.Log("Enemy's health dropped to 0!");
+        }
+        
+        Destroy(gameObject);
     }
 }

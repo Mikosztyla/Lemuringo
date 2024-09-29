@@ -9,10 +9,23 @@ public class WordManager : MonoBehaviour
     private List<string> words = new();
     private List<string> originalWords = new();
     private int currWord;
-
+    
     private void Awake()
     {
         Instance = this;
+        currWord = 0;
+        words = new List<string>
+        {
+            "aaa",
+            "bbb",
+            "ccc"
+        };
+        originalWords = new List<string>
+        {
+            "aaa",
+            "bbb",
+            "ccc"
+        };
     }
 
     public string GetNewWord()
@@ -35,5 +48,10 @@ public class WordManager : MonoBehaviour
         currWord = 0;
         words = newWords;
         this.originalWords = originalWords;
+    }
+
+    public int GetAmoutOfWords()
+    {
+        return words.Count;
     }
 }
