@@ -23,6 +23,7 @@ public class LanguageSelectorMenu : MonoBehaviour
         }
         myLanguageDropdown.ClearOptions();
         myLanguageDropdown.AddOptions(languageDictionarySerializable.languageDictionaryValue);
+        myLanguageDropdown.AddOptions(languageDictionarySerializable.languageDictionaryValue);
         otherLanguageDropdown.ClearOptions();
         otherLanguageDropdown.AddOptions(languageDictionarySerializable.languageDictionaryValue);
     }

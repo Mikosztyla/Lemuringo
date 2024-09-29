@@ -50,4 +50,17 @@ public class GameManager : MonoBehaviour
         GetComponent<WordManager>().LoadNewWords(translatedWordsList, level.words);
         SceneManager.LoadScene(3);
     }
+
+    public void LoadLevel(List<FishCard> fishCards)
+    {
+        List<string> originalWords = new();
+        List<string> translatedWords = new();
+        foreach (FishCard fishCard in fishCards)
+        {
+            originalWords.Add(fishCard.OriginalWord);
+            translatedWords.Add(fishCard.TranslatedWord);
+        }
+        GetComponent<WordManager>().LoadNewWords(originalWords, translatedWords);
+        SceneManager.LoadScene(3);
+    }
 }

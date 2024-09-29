@@ -105,4 +105,9 @@ public class CardMenu : MonoBehaviour
         SaveFishCards();
     }
 
+    public void PlayFromCustom()
+    {
+        FindAnyObjectByType<GameManager>().LoadLevel(fishCards);
+    }
+
 }

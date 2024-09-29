@@ -10,6 +10,7 @@ public class AllCardsMenu : MonoBehaviour
     [SerializeField] private GameObject cardPrefab;
     [SerializeField] private GameObject addNewCard;
     [SerializeField] private Button backButton;
+    [SerializeField] private Button playButton;
 
     private void Awake()
     {
@@ -35,5 +36,10 @@ public class AllCardsMenu : MonoBehaviour
     {
         CardMenu.Instance.DisableEverything();
         MainMenu.Instance.ActiveMenu();
+    }
+
+    private void PlayButtonClick()
+    {
+        CardMenu.Instance.PlayFromCustom();
     }
 }
