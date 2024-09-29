@@ -19,6 +19,6 @@ public class EnemyWords : MonoBehaviour
     public void ActivateWord(string word)
     {
         wordSpeak.SetActive(true);
-        wordText.text = word;
+        wordText.text = $"Podaj tlumaczenie slowa <b>{word}</b> po angielsku";
     }
 }
