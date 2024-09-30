@@ -26,11 +26,13 @@ public class CardMenu : MonoBehaviour
         DisableEverything();
         allCardsMenu.gameObject.SetActive(true);
         allCardsMenu.Initialize(fishCards);
+        ShowAllCards();
     }
-    
+
     public void Initialize(string yourLanguage, string otherLanguage)
     {
         translatorApi = new TranslatorApi(yourLanguage, otherLanguage);
+        ShowAllCards();
     }
 
     public void DisableEverything()
@@ -59,7 +61,7 @@ public class CardMenu : MonoBehaviour
         addNewCard.gameObject.SetActive(false);
         cardOptionMenu.Initialize(fishCard, cardIndex);
     }
-    
+
     public void ModifyCard(FishCard fishCard, int cardIndex)
     {
         fishCards[cardIndex] = fishCard;

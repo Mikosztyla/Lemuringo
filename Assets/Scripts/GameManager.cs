@@ -37,9 +37,9 @@ public class GameManager : MonoBehaviour
         this.otherLanguage = language;
     }
 
-    public async void LoadLevel(LevelSO level)
-    {
-        TranslatorApi translatorApi = new TranslatorApi(yourLanguage, otherLanguage);
+    public async void LoadLevel(LevelSO level) {
+        var languageToLearn = PlayerPrefs.GetString("Lg_o");
+        TranslatorApi translatorApi = new TranslatorApi(yourLanguage, languageToLearn);
         var translatedWords = await translatorApi.Translate(level.words);
 
         List<string> translatedWordsList = new List<string>();

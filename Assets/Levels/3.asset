@@ -20,4 +20,4 @@ MonoBehaviour:
   - Samochod
   - Kaczka
   levelEnabled: 1
-  levelPassed: 1
+  levelPassed: 0

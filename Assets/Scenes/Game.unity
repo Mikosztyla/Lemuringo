@@ -6686,6 +6686,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3447678158682960759, guid: 127c4e4dad9e0a645be80615ac90d03b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4790071524737271226, guid: 127c4e4dad9e0a645be80615ac90d03b, type: 3}
       propertyPath: playerTransform
       value: 

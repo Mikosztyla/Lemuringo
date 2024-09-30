@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelId: 1
   words:
-  - aaaa
-  - bbbb
-  - ccc
+  - Kot
+  - Pies
+  - "Samoch\xF3d"
   levelEnabled: 1
-  levelPassed: 1
+  levelPassed: 0

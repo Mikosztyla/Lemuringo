@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   levelId: 2
-  words: []
+  words:
+  - "Jab\u0142ko"
+  - Bilet
+  - "W\u0142osy"
+  - "Ksi\u0105zka"
   levelEnabled: 1
-  levelPassed: 1
+  levelPassed: 0

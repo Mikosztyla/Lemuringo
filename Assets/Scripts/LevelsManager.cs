@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
@@ -25,8 +26,9 @@ public class LevelsManager : MonoBehaviour
 
     public void LevelPassed()
     {
-        levels[nextLevelToUnlock-1].levelPassed = true;
-        levels[nextLevelToUnlock].levelEnabled = true;
-        FindObjectOfType<LevelsLoader>().UpdateLevels();
+        // levels[nextLevelToUnlock-1].levelPassed = true;
+        // levels[nextLevelToUnlock].levelEnabled = true;
+        SceneManager.LoadScene(2);
+        // FindObjectOfType<LevelsLoader>().UpdateLevels();
     }
 }

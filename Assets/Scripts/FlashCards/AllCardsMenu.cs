@@ -15,6 +15,7 @@ public class AllCardsMenu : MonoBehaviour
     private void Awake()
     {
         backButton.onClick.AddListener(BuckButtonClick);
+        playButton.onClick.AddListener(PlayButtonClick);
     }
 
     public void Initialize(List<FishCard> fishCards)
@@ -23,7 +24,7 @@ public class AllCardsMenu : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        Instantiate(addNewCard, content.transform);        
+        Instantiate(addNewCard, content.transform);
         fishCards = SaveFishCardsSystem.LoadFishCards();
         for (int i = 0; i < fishCards.Count; i++)
         {

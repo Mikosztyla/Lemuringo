@@ -29,7 +29,6 @@ public class DisplayWord : MonoBehaviour
     private void Update()
     {
         if (!Input.anyKeyDown || wordToDisplay == null) return;
-        Debug.Log(wordToDisplay[currentLetter].ToString());
         char letter = wordToDisplay[currentLetter];
         KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), letter.ToString().ToUpper());
         if (Input.GetKeyDown(key))
@@ -49,7 +48,7 @@ public class DisplayWord : MonoBehaviour
         EnemyWords.Instance.ActivateWord(WordManager.Instance.GetOriginalWord());
         SetUpNewWord();
     }
-          
+
     public void UpdateWordToDisplay(LetterType letterType)
     {
         currLetterDisplay.SetLetterType(letterType);
@@ -81,7 +80,7 @@ public class DisplayWord : MonoBehaviour
                     isShaking = false;
                 });
                 break;
-        } 
+        }
     }
 
     public void SetUpNewWord()
