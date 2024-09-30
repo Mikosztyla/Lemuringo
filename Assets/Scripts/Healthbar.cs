@@ -50,7 +50,7 @@ public class HealthBar : MonoBehaviour
         if (CompareTag("Player"))
         {
             Debug.Log("Player's health dropped to 0!");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
         else if (CompareTag("Enemy"))
         {

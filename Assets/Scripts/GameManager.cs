@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             translatedWordsList.Add(word.Value);
         }
         GetComponent<WordManager>().LoadNewWords(translatedWordsList, level.words);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
     public void LoadLevel(List<FishCard> fishCards)
@@ -61,6 +61,6 @@ public class GameManager : MonoBehaviour
             translatedWords.Add(fishCard.TranslatedWord);
         }
         GetComponent<WordManager>().LoadNewWords(originalWords, translatedWords);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

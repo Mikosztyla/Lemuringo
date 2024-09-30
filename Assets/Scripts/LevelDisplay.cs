@@ -21,7 +21,8 @@ public class LevelDisplay : MonoBehaviour
 
     public void EnableLevel()
     {
-        levelImage.color = levelsManager.enabledColor;
+        levelImage.color = Color.white;
+        GetComponent<Button>().interactable = true;
     }
 
     public void PassLevel()
@@ -40,8 +41,10 @@ public class LevelDisplay : MonoBehaviour
     public void UpdateLevel()
     {
         if (levelSO == null) return;
-        if (levelSO.levelEnabled) EnableLevel();
-        if (levelSO.levelPassed) PassLevel();
+        if (levelSO.levelId is 1 or 2 or 3) EnableLevel();
+        else GetComponent<Button>().interactable = false;
+
+        // if (levelSO.levelPassed) PassLevel();
 
         levelNumber.text = levelSO.levelId.ToString();
     }
