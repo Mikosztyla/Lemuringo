@@ -4,6 +4,8 @@
 ## About the Game
 Lemuringo is a 2D top-down writing game designed to make learning new words fun and interactive! 📝✨ Using a free open API for dictionaries, players can explore different languages, create their own flashcards, and improve their vocabulary in an engaging way.
 
+Link to the [presentation](https://www.canva.com/design/DAGSIL8ibBw/dnC0NgFUX3YOGkMvpl-SMA/edit?utm_content=DAGSIL8ibBw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## How to Play
 - **Create Flashcards** – Choose your language and input words to build your own set.
 - **Challenge Yourself** – Test your knowledge by playing interactive writing challenges.
